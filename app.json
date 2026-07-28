@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "AAIR To-Do",
+    "slug": "aair-todo-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#4F46E5"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aairlabs.todoapp",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Allow AAIR To-Do to use the microphone to add tasks by voice.",
+        "NSSpeechRecognitionUsageDescription": "Allow AAIR To-Do to use speech recognition to transcribe your tasks."
+      }
+    },
+    "android": {
+      "package": "com.aairlabs.todoapp",
+      "adaptiveIcon": {
+        "backgroundColor": "#4F46E5"
+      },
+      "permissions": [
+        "RECORD_AUDIO",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Allow AAIR To-Do to use the microphone to add tasks by voice.",
+          "speechRecognitionPermission": "Allow AAIR To-Do to use speech recognition to transcribe your tasks."
+        }
+      ],
+      "expo-font",
+      "expo-asset"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "3c31c709-24e2-4ecd-af44-9b5bec1d0ad6"
+      }
+    },
+    "owner": "blessing18"
+  }
+}
