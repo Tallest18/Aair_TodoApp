@@ -182,7 +182,7 @@ export default function TaskListScreen({ navigation }: Props) {
                   <View style={styles.streakRow}>
                     <Ionicons name="flame" size={14} color={colors.overdue} />
                     <Text style={[styles.heroSubtitle, { color: colors.textSecondary }]}>
-                      {stats.currentStreak > 0 ? `${stats.currentStreak}-day streak` : 'Start a streak today'}
+                      {stats.currentStreak > 0 ? `${stats.currentStreak}-day streak` : 'ZZZCANARY-MARKER-999'}
                     </Text>
                   </View>
                 </View>
