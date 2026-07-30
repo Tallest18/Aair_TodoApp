@@ -8,6 +8,7 @@ import { CategoryId, FilterOption, RootStackParamList, SortOption, Task } from '
 import { useTasks } from '../context/TaskContext';
 import { useTheme } from '../theme/ThemeContext';
 import { CATEGORIES, PRIORITY_MAP } from '../constants/taskMeta';
+import { MAX_CONTENT_WIDTH } from '../constants/layout';
 import { getCompletionStats } from '../utils/statsUtils';
 import TaskItem from '../components/TaskItem';
 import EmptyState from '../components/EmptyState';
@@ -168,6 +169,7 @@ export default function TaskListScreen({ navigation }: Props) {
   return (
     <GradientBackground>
       <View style={styles.container}>
+      <View style={styles.contentColumn}>
         {!noTasksAtAll && (
           <>
             <GlassCard style={styles.heroCard} radius={22}>
@@ -182,7 +184,7 @@ export default function TaskListScreen({ navigation }: Props) {
                   <View style={styles.streakRow}>
                     <Ionicons name="flame" size={14} color={colors.overdue} />
                     <Text style={[styles.heroSubtitle, { color: colors.textSecondary }]}>
-                      {stats.currentStreak > 0 ? `${stats.currentStreak}-day streak` : 'ZZZCANARY-MARKER-999'}
+                      {stats.currentStreak > 0 ? `${stats.currentStreak}-day streak` : 'Start a streak today'}
                     </Text>
                   </View>
                 </View>
@@ -263,14 +265,15 @@ export default function TaskListScreen({ navigation }: Props) {
             testID="task-list"
           />
         )}
+      </View>
 
-        <FAB status={status} onPress={handleFabPress} />
+      <FAB status={status} onPress={handleFabPress} />
 
-        {showCelebration && (
-          <View style={StyleSheet.absoluteFill} pointerEvents="none">
-            <ConfettiBurst particleCount={70} minDistance={120} maxDistance={340} onDone={() => setShowCelebration(false)} />
-          </View>
-        )}
+      {showCelebration && (
+        <View style={StyleSheet.absoluteFill} pointerEvents="none">
+          <ConfettiBurst particleCount={70} minDistance={120} maxDistance={340} onDone={() => setShowCelebration(false)} />
+        </View>
+      )}
       </View>
     </GradientBackground>
   );
@@ -278,6 +281,7 @@ export default function TaskListScreen({ navigation }: Props) {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
+  contentColumn: { flex: 1, width: '100%', maxWidth: MAX_CONTENT_WIDTH, alignSelf: 'center' },
   centered: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   list: { flex: 1 },
   listContent: { paddingBottom: 120, paddingTop: 4 },

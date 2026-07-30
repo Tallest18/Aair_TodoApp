@@ -20,6 +20,7 @@ import { CategoryId, NewTaskInput, Priority, RootStackParamList, Subtask } from 
 import { useTasks } from '../context/TaskContext';
 import { useTheme } from '../theme/ThemeContext';
 import { CATEGORIES, PRIORITIES } from '../constants/taskMeta';
+import { MAX_CONTENT_WIDTH } from '../constants/layout';
 import CategoryChip from '../components/CategoryChip';
 import ScalePressable from '../components/ScalePressable';
 import GradientBackground from '../components/GradientBackground';
@@ -286,7 +287,7 @@ export default function AddTaskScreen({ navigation, route }: Props) {
 
 const styles = StyleSheet.create({
   flex: { flex: 1 },
-  content: { padding: 20, paddingBottom: 60 },
+  content: { padding: 20, paddingBottom: 60, width: '100%', maxWidth: MAX_CONTENT_WIDTH, alignSelf: 'center' },
   label: { fontSize: 13, fontWeight: '600', marginBottom: 6, textTransform: 'uppercase', letterSpacing: 0.5 },
   input: {
     borderWidth: 1,

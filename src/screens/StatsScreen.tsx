@@ -8,6 +8,7 @@ import { useTasks } from '../context/TaskContext';
 import { useTheme } from '../theme/ThemeContext';
 import { CATEGORY_MAP } from '../constants/taskMeta';
 import { getCompletionStats } from '../utils/statsUtils';
+import { MAX_CONTENT_WIDTH } from '../constants/layout';
 import GradientBackground from '../components/GradientBackground';
 import GlassCard from '../components/GlassCard';
 import ProgressRing from '../components/ProgressRing';
@@ -116,7 +117,7 @@ export default function StatsScreen(_props: Props) {
 }
 
 const styles = StyleSheet.create({
-  content: { padding: 16, paddingBottom: 60, gap: 14 },
+  content: { padding: 16, paddingBottom: 60, gap: 14, width: '100%', maxWidth: MAX_CONTENT_WIDTH, alignSelf: 'center' },
   ringCard: { alignItems: 'center', gap: 12 },
   ringPercent: { fontSize: 20, fontWeight: '800' },
   ringLabel: { fontSize: 11, fontWeight: '600' },
