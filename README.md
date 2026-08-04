@@ -158,21 +158,16 @@ extension point (record audio with `expo-av`, POST to
 the same `onFinalTranscript` callback). No other code needs to change.
 
 ## Notes on screenshots
+### Home Screen
+<img src="./screenshots/Aair-Todo1.jpeg" width="300" />
 
-This project was generated in a code-only environment without a device/emulator
-attached, so the `/screenshots` folder currently only contains a checklist of
-what to capture (see `screenshots/README.md`). Please run the app and add real
-screenshots there (and embed them below) before submitting, per the exercise's
-submission guidelines.
+### Home screen light mode
+<img src="./screenshots/Aair-Todo2.jpeg" width="300" />
 
-<!-- Once captured, embed screenshots like this:
-![Task List — empty](screenshots/task-list-empty.png)
-![Task List — mixed](screenshots/task-list-mixed.png)
-![Add Task](screenshots/add-task.png)
-![Voice input listening](screenshots/voice-input-listening.png)
-![Voice input result](screenshots/voice-input-result.png)
-![Dark theme](screenshots/dark-theme.png)
--->
+### Home screen with task
+<img src="./assets/Aair-Todo3.jpeg" width="300" />
+
+
 
 ## Evaluation checklist mapping
 
