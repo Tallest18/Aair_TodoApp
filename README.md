@@ -167,6 +167,10 @@ the same `onFinalTranscript` callback). No other code needs to change.
 ### Home screen with task
 <img src="./assets/Aair-Todo3.jpeg" width="300" />
 
+## APK BUILD
+
+APK BUILD: https://expo.dev/artifacts/eas/XotZvlbMZEtfSjf4AEWRwbSGW8_vAgpGuex9JRiy9Xs.apk
+
 
 
 ## Evaluation checklist mapping
