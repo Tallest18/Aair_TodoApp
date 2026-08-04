@@ -159,10 +159,10 @@ the same `onFinalTranscript` callback). No other code needs to change.
 
 ## Notes on screenshots
 ### Home Screen
-<img src="./screenshots/Aair-Todo1.jpeg" width="300" />
+<img src="./assets/Aair-Todo1.jpeg" width="300" />
 
 ### Home screen light mode
-<img src="./screenshots/Aair-Todo2.jpeg" width="300" />
+<img src="./assets/Aair-Todo2.jpeg" width="300" />
 
 ### Home screen with task
 <img src="./assets/Aair-Todo3.jpeg" width="300" />
